@@ -1,12 +1,20 @@
 def time_conversion(minutes)
- if minutes <= 59
- time = 00.to_s + ":" + minutes.to_s
-  elsif (minutes % 60) > 0
-	time = (minutes/60).to_s + ":" +(minutes%60).to_s
-  else 
-  	time = (minutes/60).to_s + ":" + "00"
+	d = minutes
+	hr = d/60
+	mins = d%60
+   if   hr == 0 && mins <= 59
+   time = 00.to_s + ":" + mins.to_s
+   return time
+
+   elsif hr > 0 && mins != 0
+	time = (hr).to_s + ":" + mins.to_s
+	return time
+
+   else
+  	time = (hr).to_s + ":" + "00"
+  	return time
+
    end    
-return time
 end
 puts('time_conversion(15) == "0:15": ' + (time_conversion(15) == '0:15').to_s)
 puts('time_conversion(150) == "2:30": ' + (time_conversion(150) == '2:30').to_s)
