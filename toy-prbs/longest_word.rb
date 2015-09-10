@@ -1,5 +1,12 @@
 def longest_word(sentence)
+# 	store = sentence.split
+# 	%w{ store }.inject do |memo, word|
+#       memo.length > word.length ? memo : word
+#    end
+#    return store
+# end
 	store = sentence.split(' ')
+	d = 0
 	
 	count = Array.new
 	i = 0
@@ -17,9 +24,10 @@ def longest_word(sentence)
     		val_check = count[t]
     		t += 1
         end
-        
+    d = count.index(val_check)   
     end
-    return store[count.index(val_check)].to_s
+    
+    return store[d].to_s
  end
 
 # These are tests to check that your code is working. After writing

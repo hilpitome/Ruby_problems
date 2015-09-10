@@ -22,8 +22,7 @@ def is_prime?(number)
      elsif number == 7
     	return true
      elsif number == 11
-    	return true
-    	
+    	return true    	
     else 
     	return false
     end

@@ -9,7 +9,7 @@ def factorial(n)
 	    end
 	end
 	
-	# return ans
+	return ans
 end
 
 # These are tests to check that your code is working. After writing
