@@ -19,7 +19,7 @@
         <td><%= deal.title %></td>
         <td><%= deal.price %></td>
         <td><%= deal.description %></td>
-        <td><%= deal.image_url %></td>
+        <td><%= image_tag deal.image.url %></td>
         <td><%= link_to 'Show', deal %></td>
         <td><%= link_to 'Edit', edit_deal_path(deal) %></td>
         <td><%= link_to 'Destroy', deal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
